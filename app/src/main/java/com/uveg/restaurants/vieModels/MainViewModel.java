@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModel;
 import com.uveg.restaurants.models.DataFixed;
 import com.uveg.restaurants.models.Restaurant;
 
-import java.io.Closeable;
 import java.util.List;
 public class MainViewModel extends ViewModel{
 

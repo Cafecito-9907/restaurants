@@ -6,4 +6,13 @@
     </style>
 
     <style name="Theme.Restaurants" parent="Base.Theme.Restaurants" />
+
+    <style name="Theme.Restaurants.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Restaurants.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Restaurants.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

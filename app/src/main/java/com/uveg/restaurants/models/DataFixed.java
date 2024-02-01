@@ -38,7 +38,7 @@ public class DataFixed {
         complementsList1.add(new Complements("Calamares a la Romana", 9.99, "Calamares fritos con limón."));
 
         restaurant1.setDishList(dishList1);
-        restaurant1.setDrinkList(dishList1);
+        restaurant1.setDrinkList(drinkList1);
         restaurant1.setComplementsList(complementsList1);
 
         // Restaurante "Sabor Mexicano"
