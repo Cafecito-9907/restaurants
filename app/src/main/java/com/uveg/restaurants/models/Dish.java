@@ -1,8 +1,11 @@
 package com.uveg.restaurants.models;
 
+import java.io.Serializable;
 import java.util.Objects;
+import java.util.Random;
 
-public class Dish {
+public class Dish implements Serializable {
+    private Long id = new Random().nextLong();
 
     private String foodName;
     private Double foodCost;

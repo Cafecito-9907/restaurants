@@ -7,13 +7,14 @@
     android:id="@+id/complementsFrag">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/drinkRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hello tab3"
-        android:textSize="24dp"
-        android:gravity="center"
-        />
+        android:layout_height="253dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="2dp"
+        tools:itemCount="5"
+        tools:listitem="@layout/sides_list_item" />
 
 </FrameLayout>

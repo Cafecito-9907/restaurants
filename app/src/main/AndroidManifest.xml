@@ -12,18 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Restaurants"
         tools:targetApi="31">
-        <activity
-            android:name=".activity.RestaurantActivity"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activity.RestaurantTabsActivity">
+            <!-- No es necesario tener la acción MAIN y LAUNCHER en ambas actividades -->
+        </activity>
+
     </application>
 
 </manifest>

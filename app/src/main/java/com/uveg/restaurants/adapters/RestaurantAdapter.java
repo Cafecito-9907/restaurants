@@ -17,11 +17,15 @@ import java.util.List;
 public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder> {
 
     private List<Restaurant> restaurantList;
-    private Context context;
+    private OnRestaurantClickListener onRestaurantClickListener;
 
-    public RestaurantAdapter(Context context, List<Restaurant> restaurantList) {
-        this.context = context;
+    public interface OnRestaurantClickListener {
+        void onRestaurantClick(Restaurant restaurant);
+    }
+
+    public RestaurantAdapter(List<Restaurant> restaurantList, OnRestaurantClickListener onRestaurantClickListener) {
         this.restaurantList = restaurantList;
+        this.onRestaurantClickListener = onRestaurantClickListener;
     }
 
     @NonNull
@@ -38,6 +42,12 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         // Configurar las vistas dentro del ViewHolder con los datos del restaurante
         holder.restaurantNameTextView.setText(restaurant.getRestaurantName());
         // También puedes configurar otras vistas según tus necesidades
+
+        holder.itemView.setOnClickListener(v -> {
+            if (onRestaurantClickListener != null) {
+                onRestaurantClickListener.onRestaurantClick(restaurant);
+            }
+        });
     }
 
     @Override
@@ -47,12 +57,12 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
 
     public static class RestaurantViewHolder extends RecyclerView.ViewHolder {
         public TextView restaurantNameTextView;
-        // Puedes agregar más vistas según tus necesidades
 
         public RestaurantViewHolder(View itemView) {
             super(itemView);
             restaurantNameTextView = itemView.findViewById(R.id.restaurant_name);
-            // Inicializar otras vistas aquí según tus necesidades
         }
     }
+
+
 }

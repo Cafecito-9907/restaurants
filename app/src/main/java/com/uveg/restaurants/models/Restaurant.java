@@ -1,10 +1,13 @@
 package com.uveg.restaurants.models;
 
+import java.io.Serializable;
 import java.util.List;
+import java.util.Random;
 
-public class Restaurant {
+public class Restaurant implements Serializable {
 
     private String restaurantName;
+    private Long id = new Random().nextLong();
     private List<Dish> dishList;
     private List<Drink> drinkList;
     private List<Complements> complementsList;

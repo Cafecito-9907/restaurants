@@ -7,13 +7,16 @@ public class DataFixed {
 
     private List<Restaurant> restaurantList;
 
+
     public DataFixed() {
+        this.restaurantList = new ArrayList<>();
         this.getData();
     }
 
     public List<Restaurant> getRestaurantList() {
         return restaurantList;
     }
+
 
     public void getData(){
         Restaurant restaurant1 = new Restaurant("Delicias del Mar");
@@ -40,6 +43,8 @@ public class DataFixed {
         restaurant1.setDishList(dishList1);
         restaurant1.setDrinkList(drinkList1);
         restaurant1.setComplementsList(complementsList1);
+
+
 
         // Restaurante "Sabor Mexicano"
         Restaurant restaurant2 = new Restaurant("Sabor Mexicano");
